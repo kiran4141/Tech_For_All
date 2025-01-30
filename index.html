@@ -3,9 +3,165 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hello World</title>
+    <meta name="description" content="Tech Help For All - Assisting older people with technology issues.">
+    <title>Tech Help For All</title>
+    <style>
+        /* Basic Styling */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #4CAF50;
+            color: white;
+            text-align: center;
+            padding: 1.5em 0;
+        }
+
+        h1 {
+            margin: 0;
+            font-size: 2.5em;
+        }
+
+        .container {
+            width: 80%;
+            margin: 0 auto;
+            padding: 2em;
+            background-color: white;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            margin-top: 2em;
+        }
+
+        .btn {
+            background-color: #4CAF50;
+            color: white;
+            padding: 15px 32px;
+            text-align: center;
+            display: inline-block;
+            font-size: 16px;
+            cursor: pointer;
+            border: none;
+            border-radius: 5px;
+            text-decoration: none;
+            margin: 10px 0;
+        }
+
+        .btn:hover {
+            background-color: #45a049;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        label {
+            display: block;
+            font-size: 1.1em;
+            margin-bottom: 5px;
+        }
+
+        input[type="text"], input[type="email"], textarea {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 1em;
+        }
+
+        textarea {
+            height: 150px;
+        }
+
+        .form-container {
+            margin-top: 2em;
+        }
+
+        footer {
+            text-align: center;
+            padding: 1em;
+            background-color: #333;
+            color: white;
+            margin-top: 2em;
+        }
+    </style>
 </head>
 <body>
-    <h1>Hello, World!</h1>
+
+    <!-- Header -->
+    <header>
+        <h1>Tech Help For All</h1>
+        <p>Helping you with tablets, laptops, and all things tech!</p>
+    </header>
+
+    <!-- Main Container -->
+    <div class="container">
+        <!-- Buttons -->
+        <div>
+            <a href="#register-form" class="btn">Register for Help</a>
+            <a href="#contact-form" class="btn">Contact Us</a>
+        </div>
+
+        <!-- Forms -->
+        <div class="form-container">
+            <h2>Submit Your Query</h2>
+
+            <!-- Registration Form -->
+            <div id="register-form">
+                <h3>Register for Help</h3>
+                <p>Fill in your details and we’ll get back to you.</p>
+                <form action="submit_registration.php" method="POST">
+                    <div class="form-group">
+                        <label for="email">Email ID:</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="contact">Contact Number:</label>
+                        <input type="text" id="contact" name="contact" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="issue">Technical Issue:</label>
+                        <textarea id="issue" name="issue" required></textarea>
+                    </div>
+                    <div class="form-group">
+                        <button type="submit" class="btn">Submit</button>
+                    </div>
+                </form>
+            </div>
+
+            <!-- Contact Us Form -->
+            <div id="contact-form" style="margin-top: 40px;">
+                <h3>Contact Us</h3>
+                <p>Have a question or need assistance? Get in touch with us!</p>
+                <form action="submit_contact.php" method="POST">
+                    <div class="form-group">
+                        <label for="contact-email">Email ID:</label>
+                        <input type="email" id="contact-email" name="contact-email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="contact-phone">Contact Number:</label>
+                        <input type="text" id="contact-phone" name="contact-phone" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Your Message:</label>
+                        <textarea id="message" name="message" required></textarea>
+                    </div>
+                    <div class="form-group">
+                        <button type="submit" class="btn">Send Message</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 Tech Help For All. All rights reserved.</p>
+    </footer>
+
 </body>
 </html>
